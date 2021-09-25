@@ -1,3 +1,5 @@
+        //sorting done using shifting
+
 #include <stdio.h>
 
 int main()
