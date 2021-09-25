@@ -1,0 +1,25 @@
+#include <stdio.h>
+int main()
+{
+   int i,j,days,a[10],temp[10],n=10;
+   printf("enter array elements: ");
+   for(i=1;i<n-1;i++)
+        scanf("%d",&a[i]);
+    printf("enter days: ");
+    scanf("%d",&days);
+    
+    while(days)
+    {
+        a[0]=a[n-1]=0;
+        for(i=0;i<n;i++)
+        temp[i]=a[i];
+        for(i=1;i<n-1;i++)
+        a[i]=temp[i-1]^temp[i+1];
+    
+    days--;
+    }
+    for(i=1;i<n-1;i++){
+    printf("%d ",a[i]);
+    }
+    return 0;
+}
