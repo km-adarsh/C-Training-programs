@@ -1,0 +1,16 @@
+#include <stdio.h>
+int main()
+{
+    int n=666666,ans;
+     if(n%9==0){
+        ans=9;
+     }
+        else{
+            ans=n%9;
+        }
+	/*  OR int ans=(n%9==0)? 9 : (n%9); */
+    
+    printf("%d",ans);
+
+    return 0;
+}
