@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main()
+{
+    int i,j,k,a[50],m,n;
+   printf("enter array size: ");
+   scanf("%d",&n);
+   printf("enter array elements: ");
+   for(i=0;i<n;i++)
+        scanf("%d",&a[i]);
+        
+    printf("enter the m: ");
+    scanf("%d",&m);
+    for(i=0;i<n-2;i++){
+        for(j=i+1;j<n-1;j++){
+            for(k=i+2;k<n;k++){
+                if(a[i]+a[j]+a[k]==m){
+                    printf("[%d,%d,%d]",a[i],a[j],a[k]);
+                }
+            }
+        }
+        
+    }
+    return 0;
+}
