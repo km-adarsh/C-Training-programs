@@ -1,0 +1,30 @@
+
+	seives algorithm prime generation
+
+#include<stdio.h>
+
+void seives_prime(int num){
+    int i,j=2,primes[num+1];
+    for(i=0;i<=num;i++)
+        primes[i]=1;
+        
+    for(i=2;i*i<=num;i++){
+        for(j=i*i;j<=num;j=j+i){
+            if(primes[j]==1)
+                primes[j]=0;
+        }
+    }    
+    printf("\nPrime numbers upto %d: \n",num);;
+    for(i=2;i<=num;i++){
+        if(primes[i]==1)
+        printf("%d ",i);
+    }
+}
+
+int main(){
+    int i,j,num;
+    printf("Enter the N value: ");
+    scanf("%d",&num);
+    seives_prime(num);
+    return 0;
+}

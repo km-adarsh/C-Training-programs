@@ -1,0 +1,17 @@
+
+	NO OF PATHS FORM TOP LEFT ELEMENT TO RIGHT BOTTOM ELEMENT
+
+#include <stdio.h>
+int noofpaths(int m, int n){
+    if(m==1 || n==1)
+    return 1;
+    else
+    return noofpaths(m-1,n)+noofpaths(m,n-1);
+}
+int main()
+{
+   int m=3,n=2;
+   printf("%d",noofpaths(m,n));
+   
+    return 0;
+}

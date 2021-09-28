@@ -1,0 +1,11 @@
+#include<stdio.h>
+void rev(char *p){
+    if(*p){
+        rev(p+1);
+        printf("%c",*p);
+    }
+}
+int main(){
+    char str[10]="hello";
+    rev(str);
+}

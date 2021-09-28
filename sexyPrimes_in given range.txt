@@ -1,0 +1,26 @@
+#include<stdio.h>
+
+void seives_prime(int a,int b){
+    int i,j,primes[b+1];
+    for(i=0;i<=b;i++)
+        primes[i]=1;
+        
+    for(i=2;i*i<=b;i++){
+        for(j=i*i;j<=b;j=j+i){
+            if(primes[j]==1)
+                primes[j]=0;
+        }
+    }    
+    for(i=a;i<=b-6;i++){
+        if(primes[i] && primes[i+6])
+        printf("[%d,%d]\n",i,i+6);
+    }
+}
+
+int main(){
+    int m,n;
+    printf("Enter m and n: ");
+    scanf("%d%d",&m,&n);
+    seives_prime(m,n);
+    return 0;
+}
