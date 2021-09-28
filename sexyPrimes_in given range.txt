@@ -1,6 +1,6 @@
 #include<stdio.h>
 
-void seives_prime(int a,int b){
+void sexy_prime(int a,int b){
     int i,j,primes[b+1];
     for(i=0;i<=b;i++)
         primes[i]=1;
@@ -21,6 +21,6 @@ int main(){
     int m,n;
     printf("Enter m and n: ");
     scanf("%d%d",&m,&n);
-    seives_prime(m,n);
+    sexy_prime(m,n);
     return 0;
 }
